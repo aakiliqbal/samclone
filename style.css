@@ -1,0 +1,183 @@
+@import url(fonts/SamsungOne-700.ttf);
+@font-face {
+    font-family: SamsungOne;
+    src: url(fonts/SamsungOne-700.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: SamsungOne,arial,sans-serif;
+
+}
+body {
+    max-width: 100%;
+    background-color: #ffffff;
+}
+header nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "logo menu utility";
+    padding: 1em 2.5em;
+}
+header nav .logo{
+    justify-content: start;
+    align-items: center;
+    grid-area: logo;
+    display:flex;
+}
+header nav .menu{
+    justify-content:space-between;
+    align-items: center;
+    grid-area: menu;
+    display:flex;
+    width: 100%;
+    gap: 7%;
+
+}
+header nav .utility{
+    justify-content: end;
+    align-items: center;
+    grid-area: utility;
+    display:flex;
+}
+
+nav .logo, div.left-menu li, div.right-menu li, div.utility div{
+    display: inline-block;
+}
+nav .menu button, nav .utility button{
+    font-size: 14px;
+    padding:0.5em 7px;
+    border:none;
+    color: black;
+    text-decoration: none;
+}
+nav .menu button:hover{
+    border-radius: 20px;
+    border-color: black;
+    color: white;
+    background-color: black;
+}s
+
+nav .menu .right-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 200px
+}
+
+nav .utility img{
+    height: 25px;
+    border:none;
+    padding: 2px;
+}
+
+nav .utility .hamburger{
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  header nav .menu{
+    display: none !important;
+  }
+  nav .utility .hamburger{
+    display: block;
+  }
+  
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    
+  }
+  
+  .carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+  }
+  
+  .slide > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    z-index: 2;
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 2px;
+    bottom: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0rem .5rem;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  
+  @media (max-width: 1850px) {
+    .carousel-button{
+      bottom: 60%;
+    }
+  }
+
+  @media (max-width: 1550px) {
+    .carousel-button{
+      bottom: 65%;
+    }
+  }
+
+  @media (max-width: 1550px) {
+    .carousel-button{
+      bottom: 70%;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .carousel-button{
+      bottom: 80%;
+    }
+  }
+
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+  }
+  
+  .carousel-button:focus {
+    outline: 1px solid black;
+  }
+  
+  .carousel-button.prev {
+    left: 1rem;
+  }
+  
+  .carousel-button.next {
+    right: 1rem;
+  }
