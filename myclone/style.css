@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'SamsungOne';
+  src: url(fonts/SamsungOne-700.ttf);
+}
+
+@font-face {
+  font-family: 'Samsung Sharp Sans bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Samsung Sharp Sans bold'), url(fonts/samsungsharpsans-bold.woff) format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'SamsungOne', arial, sans-serif;
+
+}
+
+body {
+  max-width: 100%;
+  background-color: #ffffff;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: "logo menu utility";
+  padding: 1em 3em;
+}
+
+header nav .logo {
+  justify-content: start;
+  align-items: center;
+  grid-area: logo;
+  display: flex;
+}
+
+
+header nav .menu {
+  justify-content: center;
+  align-items: center;
+  grid-area: menu;
+  display: flex;
+
+}
+
+header nav .utility {
+  justify-content: end;
+  align-items: center;
+  grid-area: utility;
+  padding: 1em;
+  display: flex;
+
+}
+
+nav .logo,
+div.left-menu li,
+div.right-menu li,
+div.utility div {
+  display: inline-block;
+}
+
+nav .menu button,
+nav .utility button {
+  font-size: 14px;
+  padding: 0.5em 7px;
+  border: none;
+  color: black;
+  text-decoration: none;
+}
+
+nav .menu button:hover {
+  border-radius: 20px;
+  border-color: black;
+  color: white;
+  background-color: black;
+}
+
+nav .menu .left-menu {
+  padding-right: 10em;
+}
+
+nav .utility img {
+  height: 25px;
+  border: none;
+  padding: 2px;
+}
+
+section.outer-crousel {
+  display: flex;
+  align-items: center;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+}
+
+.carousel>ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide>img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+
+.carousel-button {
+
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(157, 155, 155, 0.5);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .5rem;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+
+
+.carousel-button.prev {
+  left: 1.5rem;
+}
+
+.carousel-button.next {
+  right: 1.5rem;
+}
+
+.text-block-container {
+  position: relative;
+  display: block;
+  direction: ltr;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.text-block-container-title-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1440px;
+  padding-top: 48px;
+}
+
+
+.text-block-container-headline-wrap {
+  overflow: hidden;
+  min-height: 48px;
+  margin-bottom: 16px;
+}
+
+
+.text-block-container-headline {
+  position: relative;
+  width: 100%;
+  max-width: 1392px;
+  margin: 0 auto;
+  font-family: 'Samsung Sharp Sans bold';
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1.2;
+  overflow: visible;
+  word-break: keep-all;
+  text-align: center;
+  text-overflow: clip;
+}
+
+
+.tab {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab nav li{
+  display: inline-block;
+}
+
+.tab-list {
+  margin: 0 auto;
+  height: 100%;
+  overflow: auto;
+}
+
+.tab-item {
+  justify-content: center;
+  margin-right: 48px;
+  height: 100%;
+}
+
+
+.tab-item-title {
+  border:none;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'SamsungOne',arial,sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  line-height: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.tab-item-title:hover, .tab-item-title:focus {
+  color: #555;
+}
+.cards-outer{
+  display:flex;
+  justify-content: space-around;
+  height:100%;
+  width:100%;
+}
+.tab-item-title:focus{
+  border: 2px dotted black;
+  text-decoration: underline;
+}
+
+
+
+.cards {  display: grid;
+  grid-template-columns: 42vw 20vw 20vw;
+  grid-template-rows: repeat(2,22vw);
+  gap: 20px 20px;
+  justify-content: center;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid grid2 grid3"
+    "grid grid4 grid5";
+}
+
+.box{
+  background-color: coral;
+  border-radius: 20px;
+
+}
+.box img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -55;
+  border-radius: 20px;
+}
+
+.card1 { grid-area: grid;}
+
+.card2 { grid-area: grid2; }
+
+.card3 { grid-area: grid3; }
+
+.card4 { grid-area: grid4; }
+
+.card5 { grid-area: grid5; }

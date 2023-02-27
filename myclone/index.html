@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samsung nav bar</title>
+  <link rel="stylesheet" href = "style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <!--Header Start-->
+  <header>
+    <nav>
+      <div class = "logo"><img src="images/icons/logo.png" alt ="logo"></div>
+      <div class = "menu">
+        <div class = "left-menu">
+          <ul>
+            <li><button>Mobile</button></li>
+            <li><button class = "tv-dropdown">TV & AV</button>
+            </li>
+            <li><button>Home Appliances</button></li>
+            <li><button>Laptop & Monitors</button></li>
+            <li><button>Displays</button></li>
+            <li><button>Accessories</button></li>
+            <li><button>Smart Things</button></li>
+            <li><button>Offers</button></li>
+          </ul>
+        </div>
+        <div class = "right-menu">
+          <ul>
+            <li><button>Support</button></li>
+            <li><button>For Business</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class = "utility">
+        <div class = "search"><button type = "button"><img src = "images/icons/search-interface-symbol.png"></button></div>
+        <div class = "cart"><button type = "button"><img src = "images/icons/shopping-cart.png"></button></div>
+        <div class = "profile"><button type = "button"><img src = "images/icons/user.png"></button></div>
+      </div>
+    </nav>
+    
+  </header>
+  <!--header end-->
+
+  <!--Carousel Section start-->
+  <section class="outer-crousel" aria-label="Newest Arrivals">
+    <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">&#8249;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#8250;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+            <video width="100%" height="100%" autoplay>
+                <source src="videos/HOME_DM3_KV_Main-KV_1440x640_resizing_pc.webm" type="video/webm">
+            </video>
+        </li>
+        <li class="slide" >
+            <img src="images/carousel/01.jpg" alt="Image #1">
+        </li>
+        <li class="slide">
+            <img src="images/carousel/02.jpg" alt="Image #2">
+        </li>
+        <li class="slide">
+            <img src="images/carousel/03.jpg" alt="Image #3">
+          </li>
+      </ul>
+    </div>
+  </section>
+<!--Carousel Section end-->
+
+<!--Highlight Heading-->
+<section class="text-block-container" style="background: #FFFFFF">
+  <div class="text-block-container-title-wrap">
+    <div class="text-block-container-headline-wrap">
+      <h2 class="text-block-container-headline">This Week's Highlights</h2>
+    </div>
+  </div>
+</section>
+<!--Highlight Heading--> 
+<section class="grid-container">
+  <div class="tab">
+    <nav class="tab-list">
+      <ul>
+        <li class="tab-item"><button class="tab-item-title">New-in</button></li>
+        <li class="tab-item"><button class="tab-item-title">Mobile</button></li>
+        <li class="tab-item"><button class="tab-item-title">TV</button></li>
+        <li class="tab-item"><button class="tab-item-title">Appliances</button></li>
+        <li class="tab-item"><button class="tab-item-title">Galaxy Ecosystem</button></li>
+        <li class="tab-item"><button class="tab-item-title">Samsung Live</button></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="cards-outer">
+    <div class="cards newin-card">
+      <div class="card1 box"><img src="images/cards/01.jpg"></div>
+      <div class="card2 box"><img src="images/cards/02.jpg"></div>
+      <div class="card3 box"><img src="images/cards/03.jpg"></div>
+      <div class="card4 box"><img src="images/cards/04.jpg"></div>
+      <div class="card5 box"><img src="images/cards/05.jpg"></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
